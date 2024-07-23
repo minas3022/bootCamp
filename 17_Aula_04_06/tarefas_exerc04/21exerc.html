@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter uma String</title>
+</head>
+<body>
+    <h1>Inverter uma String</h1>
+    <label for="Digite">Digite uma string</label>
+    <input type="text" id="stringInput" placeholder="Digite uma string">
+    <button onclick="inverterString()">Inverter</button>
+    <p id="resultado"></p>
+<!-- javascript codigos -->
+    <script>
+        // Função arrow que inverte uma string
+        const inverteString = (str) => {
+            return str.split('').reverse().join('');
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const inverterString = () => {
+            const stringInput = document.getElementById('stringInput').value;
+            const resultado = inverteString(stringInput);
+            document.getElementById('resultado').innerText = `String Invertida: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

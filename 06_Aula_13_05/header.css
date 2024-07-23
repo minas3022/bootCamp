@@ -1,0 +1,71 @@
+/*
+<regra ou seletor>{
+    propriedade: valor;
+    propriedade2: valor;
+} 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* SELETORES DE TIPO */
+h1{
+    font-size: 32px;
+}
+
+#h1-header{
+    color: palevioletred;
+}
+
+p{
+    font-size: 18px;
+    color: green;
+    font-style: italic;
+}
+.conteudo{
+    text-align: justify;
+}
+
+.container{
+    background-color: red;
+    color: yellow;
+}
+.container p{
+    background-color: blueviolet;
+    text-align: center;
+    color: black;
+    font-style: normal;
+}
+.container div{
+    background-color: burlywood;
+}
+.container div p{
+    font-family: Cambria, serif;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+}
+.container div h2{
+    font-size: 40px;
+}
+.container > p{
+    color: brown;
+}
+.container > div > div > p{
+    font-size: 40px;
+}
+button:hover{
+    background-color: pink;
+}
+.container > div > div > p:hover{
+    color: chartreuse;
+}
+.container > div > div > p:active{
+    color: rgb(255, 0, 179);
+}
+/* SELETORES DE ID */
+/* SELETORES DE CLASSE */
+/* SELETORES DESCENDENTES */
+/* SELETORES DE PSEUDO-CLASSES */

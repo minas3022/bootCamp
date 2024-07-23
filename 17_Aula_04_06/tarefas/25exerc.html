@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinar Propriedades de Objetos</title>
+</head>
+<body>
+    <h1>Combinar Propriedades de Objetos</h1>
+    <input type="text" id="objeto1Input" placeholder="Digite o primeiro objeto (JSON)">
+    <input type="text" id="objeto2Input" placeholder="Digite o segundo objeto (JSON)">
+    <button onclick="combinarObjetos()">Combinar Objetos</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Função arrow que combina duas objetos em um novo objeto
+        const combinaObjetos = (obj1, obj2) => {
+            return {...obj1, ...obj2};
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const combinarObjetos = () => {
+            const objeto1Input = document.getElementById('objeto1Input').value;
+            const objeto2Input = document.getElementById('objeto2Input').value;
+            const objeto1 = JSON.parse(objeto1Input);
+            const objeto2 = JSON.parse(objeto2Input);
+            const resultado = combinaObjetos(objeto1, objeto2);
+            document.getElementById('resultado').innerText = `Novo Objeto: ${JSON.stringify(resultado)}`;
+        }
+    </script>
+</body>
+</html>

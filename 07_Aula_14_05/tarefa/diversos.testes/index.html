@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Animado</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .menu {
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .menu ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .menu ul li a:hover {
+        background-color: #555;
+    }
+    /* Adicionando a animação */
+    @keyframes slideIn {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    .menu ul li {
+        animation: slideIn 0.5s ease-out forwards;
+        animation-delay: calc(0.1s * var(--index));
+    }
+</style>
+</head>
+<body>
+
+<div class="menu">
+    <ul>
+        <li style="--index: 1;"><a href="#">Home</a></li>
+        <li style="--index: 2;"><a href="#">Sobre</a></li>
+        <li style="--index: 3;"><a href="#">Serviços</a></li>
+        <li style="--index: 4;"><a href="#">Contato</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

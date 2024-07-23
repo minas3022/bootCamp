@@ -1,0 +1,102 @@
+/*GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+/*FONT AWESOME*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/*PADROES DO PROJETO*/
+:root{
+    --font-principal: "Baloo Da 2", sans-serif;
+    --font-padrao: "Open Sans", sans-serif;
+    --background-gelo: #f8f9fc;
+    --background-gradient: linear-gradient(to right, #4458dc, #854fee);
+    --font-cinza: #9b34e9;
+    --font-lilaz: #2d8955;
+}
+h2{
+    font-family: var(--font-principal);
+    color: var(--font-cinza);
+    font-size: 3.5rem;
+}
+h1{
+    font-family: var(--font-principal);
+    color: var(--font-lilaz);
+    font-size: 4.0rem;
+}
+
+h2a{
+    font-family: var(--font-principal);
+    color: #001494;
+    font-size: 3.5rem;
+}
+/* ANIMACAO CABECALHO */
+
+@keyframes zoom{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes mooveUp {
+    0%{
+        transform: translateY(20rem);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+    .hero-section {
+     /*  background: url('https://source.unsplash.com/1600x900/?sofa,cleaning') no-repeat center center/cover; */
+      background: url(sofa.jpg) no-repeat center center/cover;
+      animation: zoom 15s forwards;
+      background-color: transparent;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .features i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .pricing-card {
+      transition: transform 0.3s;
+    }
+    .pricing-card:hover {
+      transform: scale(1.10);
+      color: rgb(6, 38, 184);
+    }
+    footer {
+      background: #343a40;
+      color: white;
+      padding: 1rem 0;
+    }
+    footer a {
+      color: #ffc107;
+    }
+    .testimonial-section {
+      background-color: #8cb3db;
+      padding: 60px 0;
+    }
+    .testimonial-item {
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 15px;
+    }
+    .testimonial-author {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #007bff;
+      border-radius: 50%;
+    }

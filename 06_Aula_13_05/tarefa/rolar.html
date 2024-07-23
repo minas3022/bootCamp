@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Efeito de Mostrar Conteúdo de Texto</title>
+<style>
+.container {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.container.show {
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <p>Este é o conteúdo que será mostrado gradualmente.</p>
+</div>
+
+<script>
+// JavaScript para adicionar a classe "show" à div após um atraso
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.querySelector('.container').classList.add('show');
+    }, 3000); // Atraso de 1 segundo (1000ms)
+});
+</script>
+
+</body>
+</html>

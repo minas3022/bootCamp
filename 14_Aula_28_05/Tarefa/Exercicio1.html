@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soma de 1 a N</title>
+    <script>
+        function calcularSoma() {
+            // Solicita ao usuário um número inteiro positivo N
+            let N = parseInt(prompt("Digite um número inteiro positivo:"));
+
+            // Verifica se o número é positivo
+            if (isNaN(N) || N <= 0) {
+                alert("O número deve ser um inteiro positivo.");
+                return;
+            }
+
+            // Inicializa a soma em 0
+            let soma = 0;
+
+            // Calcula a soma dos números de 1 a N usando um loop
+            for (let i = 1; i <= N; i++) {
+                soma += i;
+            }
+
+            // Exibe o resultado
+            alert(`A soma dos números de 1 a ${N} é: ${soma}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Soma</h1>
+    <button onclick="calcularSoma()">Calcular Soma de 1 a N</button>
+</body>
+</html>

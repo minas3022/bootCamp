@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>União de Arrays sem Duplicatas</title>
+</head>
+<body>
+    <h1>União de Arrays sem Duplicatas</h1>
+    <label for="Digita">Digite os elementos do primeiro array separados por vírgula</label>
+    <input type="text" id="array1" placeholder="Digite os elementos do primeiro array separados por vírgula">
+    <br>
+    <label for="Digita2">Digite os elementos do segundo array separados por vírgula</label>
+    <input type="text" id="array2" placeholder="Digite os elementos do segundo array separados por vírgula">
+    <br>
+    <button onclick="unirArrays()">Unir Arrays</button>
+    <p id="resultado"></p>
+<!-- javascript -->
+    <script>
+        // Função arrow que une dois arrays sem duplicatas
+        const unirArraysSemDuplicatas = (array1, array2) => {
+            const conjunto = new Set([...array1, ...array2]);
+            return [...conjunto];
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const unirArrays = () => {
+            const array1String = document.getElementById('array1').value.trim();
+            const array2String = document.getElementById('array2').value.trim();
+
+            const array1 = array1String.split(',').map(item => item.trim());
+            const array2 = array2String.split(',').map(item => item.trim());
+
+            const resultado = unirArraysSemDuplicatas(array1, array2);
+            document.getElementById('resultado').innerText = `União sem duplicatas: ${resultado.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação com Função</title>
+   
+</head>
+<body><!-- ESTRUTURA DA CALCULADORA -->
+    <h1>Calculadora</h1>
+    <form onsubmit="event.preventDefault(); calcular();">
+        <label for="num1">Número 1:</label>
+        <input type="number" id="num1" required><br><br>
+        <label for="num2">Número 2:</label>
+        <input type="number" id="num2" required><br><br>
+        <label for="operacao">Operação:</label>
+        <select id="operacao">
+            <option value="soma">Soma</option>
+            <option value="subtracao">Subtração</option>
+            <option value="multiplicacao">Multiplicação</option>
+            <option value="divisao">Divisão</option>
+        </select><br><br>
+        <button type="submit">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+
+    <!-- FUNÇÃO EM JAVASCRIPT -->
+    <script>
+        function operacao(num1, num2, func) {
+            return func(num1, num2);
+        }
+
+        function soma(a, b) {
+            return a + b;
+        }
+
+        function subtracao(a, b) {
+            return a - b;
+        }
+
+        function multiplicacao(a, b) {
+            return a * b;
+        }
+
+        function divisao(a, b) {
+            if (b !== 0) {
+                return a / b;
+            } else {
+                return 'Divisão por zero não é permitida';
+            }
+        }
+
+        function calcular() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operacaoSelecionada = document.getElementById('operacao').value;
+
+            let resultado;
+            switch (operacaoSelecionada) {
+                case 'soma':
+                    resultado = operacao(num1, num2, soma);
+                    break;
+                case 'subtracao':
+                    resultado = operacao(num1, num2, subtracao);
+                    break;
+                case 'multiplicacao':
+                    resultado = operacao(num1, num2, multiplicacao);
+                    break;
+                case 'divisao':
+                    resultado = operacao(num1, num2, divisao);
+                    break;
+                default:
+                    resultado = 'Operação inválida';
+            }
+
+            document.getElementById('resultado').innerText = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

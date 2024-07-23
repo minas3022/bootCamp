@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Caracteres</title>
+</head>
+<body>
+    <h1>Contar Caracteres de uma string</h1>
+    <label for="Digita">Digite uma string</label>
+    <input type="text" id="texto" placeholder="Digite uma string">
+    <button onclick="contarCaracteres()">Contar Caracteres</button>
+    <p id="resultado"></p>
+<!-- JAVASCRIPT -->
+    <script>
+        // Função arrow que conta os caracteres em uma string
+        const contaCaracteres = (str) => {
+            const count = {};
+            for (let char of str) {
+                count[char] = (count[char] || 0) + 1;
+            }
+            return count;
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const contarCaracteres = () => {
+            const texto = document.getElementById('texto').value.trim();
+            const resultado = contaCaracteres(texto);
+            document.getElementById('resultado').innerText = `Contagem de caracteres: ${JSON.stringify(resultado)}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Block x inline */
+/* content box - onde conteúdo sera exibibo 
+        - height e width;
+*/
+/* padding box - Área ao redor do conteúdo 
+        - padding
+*/
+/* border box - conteudo e o preenchimento 
+        - border
+*/
+/* Margin Box - Camada mais externa, espaços em branco entra a caixa e outros elementos 
+        - margin
+*/
+
+/* Reset CSS - Remover margins e o padding */
+body{
+    margin: 0;
+    padding: 0;
+}
+/* Aplicar box-sizing para todos os elementos */
+*{
+    box-sizing: border-box;
+}
+
+/* div{
+    width: 300px; /*conteudo*/
+    /* padding: 20px; 20px esquerda + 20px direita */
+    /* 340px total */
+/* } */
+/* div{ */
+    /* width: 260px; conteudo */
+    /* padding: 20px; 20px esquerda + 20px direita */
+    /* 300px total */
+/* } */ 
+
+/* Estilizar o box */
+.box{
+    width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+}
+/* Estilizar parágrafo */
+p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+/* Estilizar Titulos */
+h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+}

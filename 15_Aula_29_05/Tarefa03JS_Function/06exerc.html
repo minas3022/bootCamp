@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando fatorial</title>
+</head>
+<body>
+    <h1 style="color: green;">Calculando fatorial</h1>
+    <label for="numero" style="color: blue;">Digite um número:</label>
+    <input type="number" id="numero">
+    <button onclick="calcularFatorial()">Fatorial</button>
+    <p style="color: red; font-size: 20px;"  id="resultado"></p>
+
+<!-- função em javascript -->
+<script>
+ function fatorial(num) {
+    if (num < 0) {
+        return "Erro: número negativo não possui fatorial."; /* VALINDANDO O ERRO DE NUMERO IGUAL A ZERO */
+    }
+    if (num === 0 || num === 1) {
+        return 1;
+    }
+    let resultado = 1;
+    for (let i = 2; i <= num; i++) {
+        resultado *= i;
+    }
+    return resultado;
+}
+
+function calcularFatorial() {
+    const numero = document.getElementById("numero").value;
+    const resultado = fatorial(Number(numero));
+    document.getElementById("resultado").innerText = "Fatorial: " + resultado;
+}
+   
+</script>
+
+
+</body>
+</html>

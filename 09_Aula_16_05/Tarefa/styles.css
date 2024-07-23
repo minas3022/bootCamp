@@ -1,0 +1,228 @@
+/* RESETANDO ESTILIZAÇAO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* VARIAVEIS PADRAO */
+:root {
+    --cor-cinza: #444;
+    --cor-azul-B: #3578e5;
+    --cor-branco: #ECF3FF;
+    --cor-escuro: #a0a1a3;
+    --cor-vermelho:#b92626;
+
+    --fonte-padrao: 'Segoe UI', Verdana, sans-serif;
+}
+
+
+/* Estilos gerais */
+body {
+    font-family: var(--fonte-padrao);
+/*     background-color: #f9f9f9;
+    color: #333; */
+    background: linear-gradient(45deg, var(--cor-branco), var(--cor-cinza));
+}
+h2{
+    color: azure;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top:0;
+    z-index: 9;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: rgb(255, 190, 25);
+    
+}
+
+nav ul li a:active{
+    color: #0120a7;
+
+}
+
+.hero {
+    background-image: linear-gradient(to right, rgba(192, 84, 135, 0.699), rgba(0, 0, 0, 0.6)), url('./images/fotografo.png');
+    background-size: auto;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.text-shadow {
+    text-shadow: 4px 4px 4px rgba(37, 16, 224, 0.925);
+}
+.text-shadow2 {
+    text-shadow: 4px 4px 4px #e01010ec;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+    color: rgb(255, 190, 25);
+}
+.btn:hover:active{
+    color: #1c0dec;
+    
+}
+
+
+/* INICIO PROJECTS */
+.projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+  }
+  
+  .projects h2{
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+  }
+  
+  .projects p{
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+  
+  .project-list{
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .projects img{
+    width: 22%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    opacity: 0.8;
+    transition: 0.9s;
+  }
+  
+  .projects img:hover{
+    opacity: 5;
+  }
+  
+  .action{
+    background-color: #181818;
+    border:0;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-top: 18px;
+    cursor: pointer;
+  }
+
+  /* FIM PROJECTS */
+
+
+
+  .rodape {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    background-color: var(--cor-cinza);
+}
+
+.rodapeTexto {
+    font-family: var(--fonte-padrao);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cor-branco);
+}
+
+/* reponsividade */
+@media (max-width: 1050px){
+    /* INICIO MAIN */
+    .main h1{
+      font-size: 45px;
+    }
+  
+    .main p{
+      font-size: 18px;
+    }
+  
+    .main{
+      background-size: cover;
+    }
+    /* FIM MAIN */
+  
+    /* INICIO SOBRE */
+
+    /* INICIO PROJETOS */
+    .projects img{
+      width: 27.5%;
+    }
+    /* FIM PROJETOS */
+  
+    /* INICIO RODAPE */
+    .rodape{
+      flex-direction: column;
+    }
+  
+    .rodapeTexto{
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  
+ 
+    /* FIM RODAPE */
+  
+  }

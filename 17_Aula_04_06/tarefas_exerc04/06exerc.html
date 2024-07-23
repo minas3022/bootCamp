@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar Números Pares</title>
+</head>
+<body>
+    <h1>Filtrar Números Pares de um Array</h1>
+    <label for="Digita">Digite números separados por vírgula:</label>
+    <input type="text" id="numeros" placeholder="Digite números separados por vírgula">
+    <button onclick="filtrarNumerosPares()">Filtrar Pares</button>
+    <p id="resultado"></p>
+<!-- JAVASCRIPT -->
+    <script>
+        // Função arrow que filtra números pares de um array
+        const filtrarPares = (arr) => arr.filter(num => num % 2 === 0);
+
+        // Função que é chamada quando o botão é clicado
+        const filtrarNumerosPares = () => {
+            const numeros = document.getElementById('numeros').value.split(',').map(Number);
+            const resultado = filtrarPares(numeros);
+            document.getElementById('resultado').innerText = `Números Pares: ${resultado.join(', ')}`;//juntar os numeros
+        }
+    </script>
+</body>
+</html>

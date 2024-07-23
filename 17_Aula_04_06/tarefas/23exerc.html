@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número de Palavras em uma String</title>
+</head>
+<body>
+    <h1>Número de Palavras em uma String</h1>
+    <input type="text" id="stringInput" placeholder="Digite uma string">
+    <button onclick="contarPalavras()">Contar Palavras</button>
+    <p id="resultado"></p>
+<!-- javascript -->
+    <script>
+        // Função arrow que conta o número de palavras em uma string
+        const contaPalavras = (str) => {
+            // Remove espaços em branco extras e divide a string em palavras usando split
+            const palavras = str.trim().split(/\s+/);
+            // Retorna o número de palavras
+            return palavras.length;
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const contarPalavras = () => {
+            const stringInput = document.getElementById('stringInput').value;
+            const resultado = contaPalavras(stringInput);
+            document.getElementById('resultado').innerText = `Número de Palavras: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

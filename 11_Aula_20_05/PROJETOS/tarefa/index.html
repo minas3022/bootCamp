@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech Bootcamps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="header">
+        <div  class="container1">
+            <h1 class="logo">EdTech  Bootcamps</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#sobre">Cursos</a></li>
+                    <li class="nav-item"><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container center-flex">
+            <h1 style="text-shadow: 4px 4px 4px #01040fec;">Transforme sua Carreira com Nossos Bootcamps</h1>
+            <p style="color: yellow;">Aprenda habilidades de alta demanda e obtenha certificações reconhecidas pelo mercado.</p>
+            <a href="#cursos" class="cta-button">Veja os Cursos</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 style="color: yellow;">Sobre Nós</h2>
+            <p style="color: yellow;">Somos uma EdTech comprometida em fornecer educação de qualidade para todos.</p>
+        </div>
+    </section>
+
+    <section id="cursos" class="cursos">
+        <div class="container equal-space">
+            <h2 style="color: white;">Nossos Cursos</h2>
+            <div class="curso-list">
+                <div class="curso-item">Curso de Excel do básico ao avançado
+                    <div class="descr">Curso em promoção R$200,00.</div>
+                </div>
+                
+                <div class="curso-item">Curso full stack java
+                    <div class="descr">Curso em promoção R$250,00.</div>
+                </div>
+                
+                <div class="curso-item">Curso de Power BI do básico ao avançado
+                    <div class="descr">Curso em promoção R$185,00.</div>
+                </div>
+                
+<!--                 <div class="curso-item">Curso de desenvolvimento Web</div> -->
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="cartas">
+        <div class="container carta-list">
+            <div class="carta zoom-effect">
+                <img src="./images/card1.png" alt="Excel">
+                <div class="description"><h2>Curso de aprendizado fácil em excel.</h2></div>
+            </div>
+            <div class="carta zoom-effect">
+                <img src="./images/card2.png" alt="Javascript">
+                <div class="description"><h2>Aprenda a lógica de programaçao em javascript.</h2></div>
+            </div>
+            <div id="carta" class="carta zoom-effect">
+                <img src="./images/card3.png" alt="Power BI">
+                <div class="description"><h2>Desenvolvimento de Dashboards em Power BI.</h2></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 style="color: yellow;">Contato</h2>
+            <form class="contact-form">
+                <label style="color: yellow;" for="name">Nome</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label style="color: yellow;"for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label style="color: yellow;"for="message">Mensagem</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 EdTech Bootcamps. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

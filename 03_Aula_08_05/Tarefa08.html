@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Alunos</title> <!-- TITULO DA PAGINA -->
+</head>
+<body>  <!-- CORPO DO FORMULARIO -->
+
+<p style="color:#af2911;"<h1><strong> MATRÍCULA DO ALUNO</strong></h1><br></p>
+
+<form action="Mensagem.html" method="get">
+   <table border="1" style="border-collapse:collapse"> <!-- tabela -->
+    <tr>
+      <td><label for="nome">Nome do Aluno:</label></td>
+      <td><input type="text" id="nome" name="nome" required></td>
+    </tr>
+    <tr>
+      <td><label for="data_nascimento">Data de Nascimento:</label></td>
+      <td><input type="date" id="data_nascimento" name="data_nascimento" required></td>
+    </tr>
+    <tr>
+      <td><label for="cpf">CPF:</label></td>
+      <td><input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Favor valide o cpf com o formato XXX.XXX.XXX-XX" required></td>
+    </tr>
+    <tr>
+      <td><label for="genero">Gênero:</label></td>
+      <td>
+        <select id="genero" name="genero" required>
+          <option value="">Selecione o Gênero</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="endereco">Endereço:</label></td>
+      <td><input type="text" id="endereco" name="endereco" required></td>
+    </tr>
+    <tr>
+      <td><label for="email">E-mail:</label></td>
+      <td><input type="email" id="email" name="email" required></td>
+    </tr>
+    <tr>
+      <td><label for="telefone">Telefone:</label></td>
+      <!-- <td><input type="tel" id="telefone" name="telefone" required></td> -->
+      <td><input type="text" id="telefone" name="telefone" pattern="\(\d{2}\)\d{5}-\d{4}" title="Informe um número de telefone válido. Ex: (99)99999-9999" required></td>
+    </tr>
+    <tr>
+      <td><label for="curso">Curso:</label></td>
+      <td>
+        <select id="curso" name="curso" required>
+          <option value="">Selecione o Curso</option>
+          <option value="matematica">Matemática</option>
+          <option value="geografia">Geografia</option>
+          <option value="biologia">Biologia</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="periodo">Período:</label></td>
+      <td>
+        <input type="radio" name="periodo" required id="periodo" value="manha"> Manhã
+        <input type="radio" name="periodo" required id="periodo" value="tarde"> Tarde
+        <input type="radio" name="periodo" required id="periodo" value="noite"> Noite
+      </td>
+    </tr>
+    <tr>
+      <td><label for="observacoes">Observações:</label></td>
+      <td><textarea id="observacoes" name="observacoes" rows="4" cols="30"></textarea></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center"><button type="submit">Enviar</button></td>
+    </tr>
+  </table>
+</form>
+
+
+</body>
+</html>

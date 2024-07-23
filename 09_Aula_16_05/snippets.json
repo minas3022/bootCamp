@@ -1,0 +1,13 @@
+{
+    "html": {
+        "snippets": {
+            "estrutura-html-semantica": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Document</title></head><body><header class=\"banner\"><div class=\"box\">Box 1</div><div class=\"box\">Box 2</div><div class=\"box\">Box 3</div></header><aside class=\"sidebar\"><nav><ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul></nav></aside><main class=\"content\"><section class=\"box-content-1\"><article>teste 1</article><article>teste 2</article><article>teste 3</article></section><section class=\"box\">Conteudo 2</section></main><footer class=\"footer\"><p>&copy; 2024 - Meu Site. All Rights Reserved.</p></footer></body></html>"
+        }
+    },
+    "css": {
+        "snippets": {
+            "estrutura-css-semantica": "* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: Arial, sans-serif; } .box-content-1 { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; padding: 20px; background-color: #39ee07; color: white; height: 200px; justify-content: center; align-items: center; } .banner { display: grid; grid-template-columns: 1fr 8fr 3fr; grid-gap: 10px; padding: 20px; background-color: #333; color: white; height: 200px; justify-content: center; align-items: center; } .sidebar { background-color: #f0f0f0; padding: 20px; text-align: center; } .content { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; padding: 20px; } .box { padding: 10px; border: 1px solid #ccc; background-color: #6e2b2b; } nav ul { list-style-type: none; padding: 0; } nav ul li { display: inline-block; margin-right: 10px; } .footer { background-color: #333; color: white; text-align: center; padding: 20px; position: fixed; bottom: 0; width: 100%; } header, aside, main { margin-bottom: 10px; }"
+        }
+    },
+    "variables": {}
+}

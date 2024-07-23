@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudações</title>
+    
+    
+</head>
+<body>
+    <h1>Gera saudações</h1>
+    <form onsubmit="event.preventDefault(); exibirSaudacao();">
+        <label for="saudacao">Saudação:</label>
+        <input type="text" id="saudacao" required><br><br>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required><br><br>
+        <button type="submit">Gerar Saudação</button>
+    </form>
+    <p id="resultado"></p>
+    <!-- função javascript -->
+    <script>
+        function criarSaudacao(saudacao) {
+            return function(nome) {
+                return `${saudacao}, ${nome}!`;
+            };
+        }
+        function exibirSaudacao() {
+            const saudacaoInput = document.getElementById('saudacao').value;
+            const nomeInput = document.getElementById('nome').value;
+
+            const saudacaoFunc = criarSaudacao(saudacaoInput);
+            const mensagem = saudacaoFunc(nomeInput);
+
+            document.getElementById('resultado').innerText = mensagem;
+        }
+    </script>
+</body>
+</html>

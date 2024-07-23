@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Palíndromo</title>
+</head>
+<body>
+    <h1>Verificar se uma String é Palíndromo</h1>
+    <input type="text" id="texto" placeholder="Digite uma string">
+    <button onclick="VerifPalindromo()">Verificar</button>
+    <p id="resultado"></p>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+        // Função arrow que verifica se uma string é um palíndromo
+        const ePalindromo = (str) => {
+            const textoLimpo = str.replace(/[\W_]/g, '').toLowerCase();
+            const textoReverso = textoLimpo.split('').reverse().join('');
+            return textoLimpo === textoReverso;
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const VerifPalindromo = () => {
+            const texto = document.getElementById('texto').value;
+            const resultado = ePalindromo(texto);
+            document.getElementById('resultado').innerText = `É palíndromo: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

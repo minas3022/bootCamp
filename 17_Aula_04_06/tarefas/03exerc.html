@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica a idade</title>
+</head>
+<body>
+    <h1>Verificar Maioridade</h1>
+    <input type="number" id="idade" placeholder="Digite a sua idade">
+    <button onclick="verificarIdade()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Função arrow que verifica se a pessoa é maior ou menor de idade
+        const verificarMaioridade = (idade) => idade >= 18 ? "Maior de Idade" : "Menor de Idade";
+
+        // Função que é chamada quando o botão é clicado
+        const verificarIdade = () => {
+            const idade = parseInt(document.getElementById('idade').value);
+            const resultado = verificarMaioridade(idade);
+            document.getElementById('resultado').innerText = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

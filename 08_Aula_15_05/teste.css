@@ -1,0 +1,62 @@
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5af046;
+    padding: 0;
+    margin: 0;
+    display: none;
+    min-width: 150px;
+    z-index: 1000;
+    border: 1px solid #0a50e7;
+  }
+  
+  nav ul li:hover ul {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+    
+    
+  }
+  
+  nav ul li ul li {
+    display: block;
+  }
+  
+  nav ul li ul li a {
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+      color: brown;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+  }
+  

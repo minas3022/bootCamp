@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Fatorial</title>
+</head>
+<body>
+    <h1>Cálculo Fatorial</h1>
+    <label for="Digita">Digite um número:</label>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="calcularFatorial()">Calcular Fatorial</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Função arrow que calcula o fatorial de um número
+        const fatorial = (n) => {
+            if (n < 0) return 'Número deve ser não-negativo';
+            return n <= 1 ? 1 : n * fatorial(n - 1);
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const calcularFatorial = () => {
+            const numero = parseInt(document.getElementById('numero').value);
+            const resultado = fatorial(numero);
+            document.getElementById('resultado').innerText = `Fatorial: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

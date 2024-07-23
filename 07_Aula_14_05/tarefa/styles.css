@@ -1,0 +1,110 @@
+:root{
+    --primary-color:#3498db; /* AZUL */
+    --secondary-color:#2ecc71;/* verde */
+    --accent-color:#e74c3c; /* laranja */
+    --background-color:#ecf0f1; /* cinza claro */
+    --text-color:#eaff31; /* cinza escuro */
+    --tamanho-fonte-padrao: 17px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    word-spacing: 10px;
+    background-image: url('./fondo.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem na tela */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    line-height: 1.5;
+}
+
+p{
+    font-size: var(--tamanho-fonte-padrao);
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    font-size: var(--tamanho-fonte-padrao);
+
+}
+
+.side-image {
+    width: 400px; /* Defina a largura desejada */
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-80%);
+}
+
+.water-lula {
+    position: relative;
+}
+
+.water {
+    position: fixed;
+    opacity: 0.4; /* Ajuste a opacidade conforme necessário */
+    top: 50%; /* Posição vertical */
+    left: 50%; /* Posição horizontal */
+    transform: translate(-50%, -50%) rotate(-30deg); /* Centralizar e rotacionar */
+    pointer-events: none; /* Evita interações com a marca d'água */
+}
+
+
+.tabbed-paragraph {
+    text-indent: 40px; /* Define a quantidade de tabulação */
+}
+#h1-header{
+    color:var(--text-color);
+    font-size: 40px;
+    text-align: center;
+}
+/* DEFINE O MENU  */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #02012c;
+    padding-top: 20px;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    padding: 10px;
+    text-align:center;
+}
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.sidebar ul li {
+    animation: slideIn 0.5s ease-out forwards;
+    animation-delay: calc(0.1s * var(--index));
+}
+
+.sidebar a:hover {
+color: #e9ff27;
+font-size: 25px;
+font-weight:bolder;
+}
+.sidebar ul li a:active{
+    color: #ec0d0d;
+    text-decoration: underline;
+
+}

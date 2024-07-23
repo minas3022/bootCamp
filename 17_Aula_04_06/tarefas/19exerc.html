@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenar Múltiplos Arrays</title>
+</head>
+<body>
+    <h1>Concatenar Múltiplos Arrays</h1>
+    <label for="Digita">Digite os elementos dos arrays separados por vírgula:</label>
+    <textarea id="arrays" placeholder="Digite os elementos dos arrays separados por vírgula"></textarea>
+    <button onclick="concatenarArrays()">Concatenar Arrays</button>
+    <p id="resultado"></p>
+<!-- javascript -->
+    <script>
+        // Função arrow que recebe múltiplos arrays e retorna um novo array concatenando todos os elementos
+        const concatenaArrays = (...arrays) => {
+            return arrays.reduce((resultado, array) => resultado.concat(array), []);
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const concatenarArrays = () => {
+            const arraysString = document.getElementById('arrays').value.trim();
+            const arrays = arraysString.split('\n').map(line => line.split(',').map(item => item.trim()));
+            const resultado = concatenaArrays(...arrays);
+            document.getElementById('resultado').innerText = `Novo Array: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

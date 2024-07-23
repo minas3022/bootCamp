@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrado de um Número</title>
+</head>
+<body>
+    <h1>Calcular o Quadrado de um Número</h1>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="calcularQuadrado()">Calcular Quadrado</button>
+    <p id="resultado"></p>
+    
+<!-- JAVASCRIPT -->
+    <script>
+        // Função arrow que calcula o quadrado de um número
+        const quadrado = (n) => n * n;
+
+        // Função que é chamada quando o botão é clicado
+        const calcularQuadrado = () => {
+            const numero = parseFloat(document.getElementById('numero').value);
+            const resultado = quadrado(numero);
+            document.getElementById('resultado').innerText = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

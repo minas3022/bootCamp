@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Médias</title>
+</head>
+<body>
+    <h1>Calcular Média</h1>
+    <label for="Digita">Digite números separados por vírgula</label>
+    <input type="text" id="numeros" placeholder="Digite números separados por vírgula">
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <p id="resultado"></p>
+<!-- JAVASCRIPT -->
+    <script>
+        // Função arrow que calcula a média de um array de números
+        const calcularMediaArray = (arr) => arr.reduce((acc, num) => acc + num, 0) / arr.length;
+
+        // Função que é chamada quando o botão é clicado
+        const calcularMedia = () => {
+            const numeros = document.getElementById('numeros').value.split(',').map(Number);
+            const resultado = calcularMediaArray(numeros);
+            document.getElementById('resultado').innerText = `Média: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

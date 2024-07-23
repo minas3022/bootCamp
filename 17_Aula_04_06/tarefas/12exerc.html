@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove elementos duplicados array</title>
+</head>
+<body>
+    <h1>Remove elementos duplicados array</h1>
+    <label for="Digita">Digite os elementos do array separados por vírgula:</label>
+    <input type="text" id="array" placeholder="Digite os elementos do array separados por vírgula">
+    <button onclick="removerDuplicados()">Remover Duplicados</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Função arrow que remove elementos duplicados de um array
+        const removeDuplicados = (array) => [...new Set(array)];
+
+        // Função que é chamada quando o botão é clicado
+        const removerDuplicados = () => {
+            const arrayString = document.getElementById('array').value.trim();
+            const array = arrayString.split(',').map(item => item.trim());
+            const resultado = removeDuplicados(array);
+            document.getElementById('resultado').innerText = `Array sem elementos duplicados: ${resultado.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

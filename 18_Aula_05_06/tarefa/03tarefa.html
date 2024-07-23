@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+</head>
+<body>
+    <h1>Agenda de Contatos</h1>
+
+    <form id="contatoForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <br>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <button type="submit">Adicionar Contato</button>
+    </form>
+
+    <h2>Buscar Contato</h2>
+    <input type="text" id="pesquisaNome" placeholder="Nome para buscar">
+    <button onclick="buscarContato()">Buscar</button>
+
+    <h2>Contatos</h2>
+    <ul id="listaContatos"></ul>
+
+    <script src="03tarefa.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .product, .cart {
+            margin-bottom: 20px;
+        }
+        .product input {
+            margin-right: 10px;
+        }
+        .cart-items {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Loja Virtual</h1>
+    <div class="product">
+        <h2>Adicionar Produto</h2>
+        <label>Nome: <input type="text" id="product-name"></label>
+        <label>Preço: <input type="number" id="product-price" step="0.01"></label>
+        <label>Quantidade em estoque: <input type="number" id="product-quantity"></label>
+        <button onclick="adicionarProduto()">Adicionar ao Carrinho</button>
+    </div>
+    <div class="cart">
+        <h2>Carrinho de Compras</h2>
+        <div class="cart-items" id="cart-items"></div>
+        <div>Total: R$ <span id="total-amount">0.00</span></div>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+    <script src="05taref.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverte String</title>
+    </head>
+<body>
+    <h1 style="color: red;">Inverte String</h1>
+    <input type="text" id="inputString" placeholder="Digite uma string"><!-- input digitar o string -->
+    <button onclick="exibirStringInvertida()">Inverter</button><!-- botao chama função  -->
+    <p id="resultado"></p>
+</body>
+
+<!-- funçao javascript para Inverte String dentro do html usada dentro do html pelo fato de ser função pequena-->
+<script>
+function inverterString(str) {
+    return str.split('').reverse().join('');
+}
+
+function exibirStringInvertida() {
+    const inputString = document.getElementById('inputString').value;
+    const stringInvertida = inverterString(inputString);
+    document.getElementById('resultado').innerText = `String invertida é: ${stringInvertida}`;
+}
+
+
+</script>
+
+</html>

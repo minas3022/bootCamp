@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto de Números em um Array</title>
+</head>
+<body>
+    <h1>Produto de Números em um Array</h1>
+    <label for="Digita">Digite os números separados por vírgula:</label>
+    <input type="text" id="numerosInput" placeholder="Digite os números separados por vírgula">
+    <button onclick="calcularProduto()">Calcular Produto</button>
+    <p id="resultado"></p>
+<!-- javascript -->
+    <script>
+        // Função arrow que retorna o produto de todos os números em um array
+        const calculaProduto = (array) => {
+            // Verifica se o array está vazio
+            if (array.length === 0) {
+                return undefined; // Se o array estiver vazio, retorna undefined
+            }
+            
+            // Utiliza o método reduce para calcular o produto de todos os números no array
+            return array.reduce((produto, numero) => produto * numero, 1);
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const calcularProduto = () => {
+            const numerosInput = document.getElementById('numerosInput').value;
+            const numeros = numerosInput.split(',').map(num => parseFloat(num.trim()));
+            const produto = calculaProduto(numeros);
+            document.getElementById('resultado').innerText = `Produto dos Números: ${produto}`;
+        }
+    </script>
+</body>
+</html>

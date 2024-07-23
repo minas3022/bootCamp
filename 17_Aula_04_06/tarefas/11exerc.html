@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Transposta de uma Matriz</title>
+</head>
+<body>
+    <h1>Calcular Transposta de uma Matriz</h1>
+    <textarea id="matriz" placeholder="Digite a matriz (uma linha para cada array, separados por vírgula)"></textarea>
+    <button onclick="calcularTransposta()">Calcular Transposta</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Função arrow que calcula a transposta de uma matriz
+        const calculaTransposta = (matriz) => {
+            const numLinhas = matriz.length;
+            const numColunas = matriz[0].length;
+            const transposta = [];
+
+            for (let j = 0; j < numColunas; j++) {
+                transposta.push([]);
+                for (let i = 0; i < numLinhas; i++) {
+                    transposta[j].push(matriz[i][j]);
+                }
+            }
+
+            return transposta;
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const calcularTransposta = () => {
+            const textoMatriz = document.getElementById('matriz').value.trim();//trim remover espaço
+            const linhas = textoMatriz.split('\n');//divide uma string nos índices correspondentes
+            const matriz = linhas.map(linha => linha.split(',').map(Number));
+            const transposta = calculaTransposta(matriz);
+            const transpostaFormatada = transposta.map(row => row.join(', ')).join('\n');
+            document.getElementById('resultado').innerText = `Transposta:\n${transpostaFormatada}`;
+        }
+    </script>
+</body>
+</html>

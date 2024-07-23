@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular a área de um Retângulo</title>
+</head>
+<body>
+    <h1>Calcular a Área de um Retângulo</h1>
+    <input type="number" id="largura" placeholder="Digite a largura">
+    <input type="number" id="altura" placeholder="Digite a altura">
+    <button onclick="calcularArea()">Calcular Área</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Função arrow que calcula a área de um retângulo
+        const calcularAreaRetangulo = (largura, altura) => largura * altura;
+
+        // Função que é chamada quando o botão é clicado
+        const calcularArea = () => {
+            const largura = parseFloat(document.getElementById('largura').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+            const resultado = calcularAreaRetangulo(largura, altura);
+            document.getElementById('resultado').innerText = `Área: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

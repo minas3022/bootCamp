@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a média</title>
+    
+</head>
+<body>
+    <h1>Calculando a média</h1>
+    <p>Digite uma sequência de números separados por vírgula(,):</p>
+    <input type="text" id="numerosInput">
+    <button onclick="CalculoMedia()">Calcular Média</button>
+    <p id="resultado"></p>
+</body>
+<!-- CODIGO EM JAVASCRIPT -->
+<SCRIpt>
+    function media(numeros) {
+    if (numeros.length === 0) {
+        return 0;
+    }
+    
+    const soma = numeros.reduce((total, numero) => total + numero, 0);
+    return soma / numeros.length;
+}
+
+function CalculoMedia() {
+    const numerosInput = document.getElementById("numerosInput").value;
+    const numeros = numerosInput.split(",").map(numero => parseFloat(numero));
+    
+    const resultado = media(numeros);
+    document.getElementById("resultado").innerText = "Média: " + resultado.toFixed(2);
+}
+
+</SCRIpt>
+</html>

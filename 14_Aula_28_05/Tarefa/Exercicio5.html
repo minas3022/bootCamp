@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Série Fibonacci</title>
+</head>
+<body>
+
+<h2>Gerador da Série Fibonacci</h2>
+
+<label for="termos">Quantidade de Termos:</label>
+<input type="number" id="termos">
+<button onclick="geraSerie()">Gerar Série</button>
+
+<div id="resultado"></div>
+
+<!-- CODIGOS FEITO EM JAVASCRIPT COM A FUNCAO GERASERIE -->
+<script>
+function geraSerie() {
+    let trminput = document.getElementById("termos"); /* referecia ao id termos */
+    let termos = parseInt(trminput.value);
+
+    let resultadoDiv = document.getElementById("resultado");
+    resultadoDiv.innerHTML = "";
+
+    let fibonacci = [];
+
+    // Adiciona os primeiros dois termos da série Fibonacci
+    fibonacci.push(0);
+    fibonacci.push(1);
+
+    // Gera os próximos termos da série Fibonacci
+    for (let i = 2; i < termos; i++) {
+        fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+    }
+
+    // Exibe os termos da série Fibonacci na página
+    resultadoDiv.innerHTML = "<p>Os primeiros " + termos + " termos da série Fibonacci são:</p>";
+    resultadoDiv.innerHTML += "<p>" + fibonacci.join(", ") + "</p>";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* Fontes */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+:root{
+    --primary-color:#3498db; /* AZUL */
+    --secondary-color:#2ecc71;/* verde */
+    --accent-color:#e74c3c; /* laranja */
+    --background-color:#ecf0f1; /* cinza claro */
+    --text-color:#2c3e50; /* cinza escuro */
+}
+
+p{
+    
+    /* color: #eb50ff; */
+    color:var(--primary-color);
+    font-family: "Roboto",arial,Impact, 'Arial Narrow Bold', sans-serif;
+    /* px (pixel) - Unidade absoluta
+    em unidade relativa no elemento pais do elemento autual
+    rem - relativa ao tamanho da fonte raiz (html) */
+    font-size: 22px;
+    font-weight:lighter; /* especifica o peso ou a intensidade da fonte (ex.: negrito) */
+         /* A PRIMEIRA LETRA MAIUSCULA */
+    /* text-transform: capitalize; */
+    /* PRIMEIRA LETRA DO PARAGRAFO */
+    text-transform: initial;
+    /* TEXTO TAXADO OU RISCADO */
+    text-decoration: overline;
+    /* layout de texto */
+    text-align: justify; /* alinhamento de paragrafo */
+    /* ESPACAMENTO ENTRE LINHAS */
+    line-height: 2;
+    /* espaçamento entre caracteres de texto */
+    letter-spacing: 4px;
+    /* ESPACAMENTO ENTRE PALVARAS INTEIRAS AUMENTA A DISTANCIA ENTRE UMA PALAVRA PARA OUTRA */
+    word-spacing: 10px;
+    /* REPRESENTACAO DE CORES */
+    /* RGB -> rgb(192 226 90) */
+    /* HEX -> #c0e25a */
+    /* HSL -> hsl(75 70.1% 62) */
+    /* HWB-> hwb(75 35.4% 11.4%) */
+
+    /* UNIDADES DE COMPRIMENTO */
+    /* UNIDADES ABSOLUTAS */
+    /* CM -> CENTIMETROS=1CM=37.8PX=25.2 / 64POL
+    MM=MILIMETROS=1MM=1/10 DE 1CM*/
+    /* Q-QUARTER-MILLIMETERS 1Q=1/40 DE 1CM */
+    /* IN - INCHES 1POL=2.54CM =96PX */
+    /* PX=PIXELS 1PX=1/96 DE 1POL */
+}
+html{
+    font-size: 18px;
+}
+div{
+    font-size: 24px;
+}
+img{
+    width: 10em; /* 240px */
+    height: 10rem; /* 180px */ /* PORQUE O HTML É 18PX */
+}

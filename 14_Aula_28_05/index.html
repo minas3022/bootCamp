@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <!-- <script async src="script.js"></script> -->
+    
+</head>
+<body>
+    <h1>Verificação de Idade</h1>
+    <label for="idade">Digite sua Idade:</label>
+    <input type="number" id="idade" name="idade">
+    <button onclick="verificarIdade()">Verificar Idade</button>
+    <p style="color: darkred; font-size: 20px;" id="resultado"></p>
+
+    <h1>Selecione um Mês</h1>
+    <label for="Mes">Escolha um mês:</label>
+    <select id="mes">
+        <option value="">--Selecione um mês--</option>
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+    </select>
+    <button onclick="verificarMes()">Mostrar Descrição</button>
+    <p style="color: rgb(47, 5, 199); font-size: 20px;" id="resultado2"></p>
+    
+
+
+</body>
+</html>

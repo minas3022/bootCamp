@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobrar Valores do Array</title>
+</head>
+<body>
+    <h1>Dobrar Valores de um Array de Números</h1>
+    <label for="Digita">Digite números separados por vírgula:</label>
+    <input type="text" id="numeros" placeholder="Digite números separados por vírgula">
+    <button onclick="dobrarValores()">Dobrar Valores</button>
+    <p id="resultado"></p>
+
+    <!-- javascript -->
+
+    <script>
+        // Função arrow que dobra os valores de um array de números
+        const dobrarArray = (arr) => arr.map(num => num * 2);
+
+        // Função que é chamada quando o botão é clicado
+        const dobrarValores = () => {
+            const numeros = document.getElementById('numeros').value.split(',').map(Number);
+            const resultado = dobrarArray(numeros);
+            document.getElementById('resultado').innerText = `Valores Dobrados: ${resultado.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

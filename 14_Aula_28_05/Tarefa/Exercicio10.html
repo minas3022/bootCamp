@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média Ponderada</title>
+    <script defer src="script10.js"></script>
+</head>
+<body>
+    <h1>Calculadora de Média Ponderada</h1>
+    <div>
+        <label for="nota">Insira a nota:</label>
+        <input type="number" id="nota" step="0.01" min="0" max="10">
+        <label for="peso">Insira o peso:</label>
+        <input type="number" id="peso" step="0.01" min="0">
+        <button onclick="adicionarNotaPeso()">Adicionar</button>
+    </div>
+    <div>
+        <button onclick="calcularMediaPonderada()">Calcular Média Ponderada</button>
+    </div>
+    <div id="notasPesos"></div>
+    <p id="resultado"></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta Bancária</title>
+</head>
+<body>
+    <h1>Conta Bancária</h1>
+
+    <form id="contaForm">
+        <label for="numeroConta">Número da Conta:</label>
+        <input type="text" id="numeroConta" required>
+        <br>
+        <label for="saldoInicial">Saldo Inicial........:</label>
+        <input type="number" id="saldoInicial" required>
+        <br>
+        <button type="submit">Criar Conta</button>
+    </form>
+
+    <h2>Operações</h2>
+    <form id="operacaoForm">
+        <label for="tipoOperacao">Tipo de Operação:</label>
+        <select id="tipoOperacao" required>
+            <option value="deposito">Depósito</option>
+            <option value="saque">Saque</option>
+        </select>
+        <br>
+        <label for="valorOperacao">Valor....................:</label>
+        <input type="number" id="valorOperacao" required>
+        <br>
+        <button type="submit">Executar Operação</button>
+    </form>
+
+    <h2>Saldo</h2>
+    <button onclick="verificarSaldo()">Verificar Saldo</button>
+    <p id="saldo"></p>
+
+    <script src="04tarefa.js"></script>
+</body>
+</html>

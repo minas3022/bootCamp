@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanCode</title>
+
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+
+</head>
+<body>
+    
+    <header id="home" class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-dark position-relative z-1">
+            <div class="container-fluid ">
+                <a class="navbar-brand ps-4 text-light" href="#">CleanCode</a>
+                <button class="navbar-toggler bg-body-tertiary" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation ">
+                    
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav position-absolute top-25 end-0">
+                  <a class="nav-link 
+                            pe-4 text-light bg-dark"
+                            href="#home">Inicio</a>
+
+                  <a class="nav-link 
+                            pe-4 text-light bg-dark" 
+                            href="#main">Sobre</a>
+
+                  <a class="nav-link 
+                            pe-4 text-light bg-dark" 
+                            href="#contact">Contato</a>
+                  <a class="nav-link 
+                            pe-4 text-light bg-dark" 
+                            href="#plan">Planos</a>
+                  <a class="nav-link 
+                            pe-5 text-light bg-dark"
+                            href="#depoiment">Depoimentos</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    
+    <main id="main">
+        <div class="card hero-section"  >
+            <img src="https://static.baratocoletivo.com.br/_cps//2017/0824/cp/oferta_15036072592055_14909882995499.jpg" class="card-img photo" alt="..." >
+            
+            <div class="card-img-overlay 
+                        d-flex flex-column justify-content-center
+                        z-1 position-absolute
+                        info
+                        ">
+
+                <h5 class="card-title text-light px-5 pb-3 fs-1">Conheça a CleanCode</h5>
+                <p class="card-text text-light px-5">Desfrute do prazer de um estofado limpo, livre de fungos,odores indeseáveis, e totalmente higienizado.</p>
+
+                <p class="card-text text-light px-5 pb-3">Somos a melhor limpeza em nossa Região! 🤩</p>
+                
+                <a href="#plan" class="mx-auto "> <button class="btn btn-outline-light btn-font">Conheça Nossos Planos</button></a>
+                
+            </div>
+          </div>
+    </main>
+    <section id="depoiment">
+            
+        <div id="carouselExampleIndicators"class="carousel slide w-75s mx-auto my-5 ">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=" bg-dark"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class=" bg-dark"></button>
+        </div>
+
+        <div class="carousel-inner">
+              <div class="carousel-item active carousel-container">
+                  <div class="card card-container 
+                              border border-0 
+                              shadow mx-auto my-5">
+                      <h4 class="card-header font-card border border-0 text-center py-2">Depoimento de Cliente</h4>
+                      <div class="card-body  ">
+                          <h4 class="card-title font-card py-1">MARISTELA CAVALCANTI</h4>
+                          <p class="card-text font-card-description">Conheci a CleanCode há 2 anos, e na época, já sentimos empatia pela agência e pelos funcionários. No meio do caminho, testamos outra empresa por outros motivos, mas ficou o desejo de voltar.</p>
+                      </div>
+                  </div>
+              </div>
+            
+            
+              <div class="carousel-item carousel-container">
+                  <div class="card card-container 
+                              border border-0 
+                              shadow mx-auto my-5">
+                      <h4 class="card-header font-card border border-0 text-center py-2">Depoimento de Cliente</h4>
+                      <div class="card-body  ">
+                          <h4 class="card-title font-card py-1">BRUNO ORI</h4>
+                      
+                          <p class="card-text font-card-description">Empresa comprometida com os nossos resultados e desempenho, comunicação clara, objetiva e certeira !! </p>
+                      
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item carousel-container">
+                  <div class="card 
+                              card-container 
+                              border border-0 
+                              shadow mx-auto my-5">
+                      <h4 class="card-header font-card border border-0  text-center py-2">Depoimento de Cliente</h4>
+                      <div class="card-body shadow-lg">
+                      <h4 class="card-title font-card py-1">PAULO</h4>
+                      
+                      <p class="card-text font-card-description">Gostaríamos de agradecer todo serviço prestado pela CleanCode, estamos satisfeitos com o anúncio de vocês.</p>
+                      
+                      </div>
+                  </div>        
+              </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section>
+        
+        <div class="container my-5">
+            <div class="row gap-3">
+                <div class="card col-md-3 border border-0 shadow mx-auto">
+                    <h5 class="card-header text-center mb-2 font-card">Serviço com Segurança</h5>
+                    <p class="font-card-description"><i class="fa fa-arrow-right "></i><strong> Após o agendamento confirmado</strong> você receberá dados com foto do profissional responsável pelo seu atendimento</p>    
+                </div>
+
+                <div class="card col col-md-3 border border-0 shadow mx-auto">
+                    <h5 class="card-header text-center mb-2 font-card ">Compromisso</h5>
+                    <p class="font-card-description"><i class="fa fa-arrow-right "></i><strong> Agende o dia e horário</strong> que mais se adequem à sua agenda. Comprometemo-nos a fornecer um serviço de alta qualidade com rapidez e eficiência</p>
+                </div>
+
+                <div class="card col col-md-3 border border-0 shadow mx-auto">
+                    <h5 class="card-header text-center mb-2 font-card ">Garantia</h5>
+                    <p class="font-card-description"><i class="fa fa-arrow-right "></i><strong> Você terá 72 horas</strong> para solicitar retorno técnico em caso de inconsistência na Limpeza e Higienização.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plan">
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4 w-75 mx-auto my-5">
+            <div class="col">
+                <div class="card h-100 border border-0 shadow">
+                    <img src="https://media.istockphoto.com/id/626851364/pt/foto/upholstered-furniture-professionally-chemical-cleaning-in-hotel-and-house.jpg?s=1024x1024&w=is&k=20&c=G1htS4NixYtt4pgC3pIKBXDw5Y7dgnhxMIp9Ypee0Ow=" class="card-img-top" alt="...">
+                    <h4 class="card-header border border-0 text-center py-2">Standard</h4>
+                    <div class="card-body border border-0">
+                    <ul>
+                        <li>Lavagem de Estofados</li>
+                        <li>Lavagem de Tapete</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="col">
+                <div class="card h-100 border border-0 shadow">
+                    <img src="https://media.istockphoto.com/id/1276530099/pt/foto/woman-cleaning-couch-with-vacuum-cleaner-at-home-cleaning-service-concept.jpg?s=1024x1024&w=is&k=20&c=9fkp2N-nXXdld0LSoJHN35F1Z8ICy_FDqAvNVxjNpWE=" class="card-img-top" alt="...">
+                    <h4 class="card-header border border-0 text-center py-2">Premium</h4>
+                    <div class="card-body">
+                        <ul>
+                            <li>Lavagem de Estofados</li>
+                            <li>Lavagem de Tapete</li>
+                            <li>Limpeza Interna</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border border-0 shadow">
+                    <img src="https://media.istockphoto.com/id/1470358204/pt/foto/male-specialist-vacuum-cleaning-the-sofa-in-the-living-room.jpg?s=1024x1024&w=is&k=20&c=75AM1kxGTuildY_QrHYFiYB65y86phVYxh46WIybfZE=" class="card-img-top" alt="...">
+                    <h4 class="card-header border border-0 text-center py-2">Deluxe</h4>
+                    <div class="card-body">
+                        <ul>
+                            <li>Lavagem de Estofados</li>
+                            <li>Lavagem de Tapete</li>
+                            <li>Limpeza Interna</li>
+                            <li>Limpeza de Fachadas e Vidros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+      <div class="buy-now-container bg-dark my-5">
+          <div>
+            <h2 class="text-center text-light py-3">Compre Agora</h2>
+          </div>
+          <div class="h-50  d-flex justify-content-center align-items-center gap-5">
+
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+              Entre em Contato
+            </button>
+            
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Duvidas? Entre em Contato</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <form action="#">
+
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite seu nome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Digite seu e-mail" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Assunto:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Assunto" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensagem:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Digite sua mensagem " required></textarea>
+                  </div>
+
+                  <a href="./index.html" class="text-decoration-none"><button  class="btn btn-outline-success d-flex align-items-center mx-auto px-4 py-2 fs-6 rounded ">Enviar</button></a>
+                  
+                </form>
+                
+              </div>
+            </div>
+
+              <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Escolher Agora</button>
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Escolha o plano</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+
+                  <div class="offcanvas-body">
+                      <div class="card border border-0 shadow mt-3">
+                          <div class="card-body">
+                          <h5 class="card-title">Standard</h5>
+                          <p class="card-text">Valor desse plano é: R$ 99,00.</p>
+                          <a href="./index.html" class="text-decoration-none"><button href="#" class="btn btn-success d-flex mx-auto">Comprar</button></a>
+                          </div>
+                      </div>
+
+                      <div class="card border border-0 shadow mt-3">
+                          <div class="card-body">
+                          <h5 class="card-title">Premium</h5>
+                          <p class="card-text">Valor desse plano é: R$ 150,00.</p>
+                          <a href="./index.html" class="text-decoration-none"><button href="#" class="btn btn-success d-flex mx-auto">Comprar</button></a>
+                          </div>
+                      </div>
+
+                      <div class="card border border-0 shadow mt-3">
+                          <div class="card-body">
+                          <h5 class="card-title">Deluxe</h5>
+                          <p class="card-text">Valor desse plano é: R$ 200,00.</p>
+                          <a href="./index.html" class="text-decoration-none"><button href="#" class="btn btn-success d-flex mx-auto">Comprar</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        
+      </div>
+    </section>
+
+    <footer class="shadow-lg">
+      <div class=" d-flex flex justify-content-around">
+          <div class="pt-5 " >
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="rounded">
+            <div class="mt-3 d-flex gap-3  justify-content-center">
+              <a href="https://www.linkedin.com" title="LinkedIn" target="_blank" class="text-dark fs-4">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              
+              <a href="https://www.youtube.com" title="Youtube" target="_blank" class="text-dark fs-4">
+                <i class="fab fa-youtube"></i>
+              </a>
+              
+              <a href="https://www.instagram.com" title="Instagram" target="_blank" class="text-dark fs-4">
+                <i class="fab fa-instagram"></i>
+              </a>
+              </div>
+          </div>
+
+          <div class=" d-flex flex-column  my-auto">
+            
+              <a href="#home" class="text-decoration-none text-dark pt-3">Inicio</a>
+              <a href="#main" class="text-decoration-none text-dark pt-2">Sobre</a>
+              <a href="#contact" class="text-decoration-none text-dark pt-2">Contato</a>
+              <a href="#plan" class="text-decoration-none text-dark pt-2">Planos</a>
+          
+          </div>
+      </div>
+      <hr>
+      <p class="text-center pb-3">Copyright &copy 2024 Equipe Front-End. Alguns direitos reservados.</p>
+      <p class="text-center pb-3">GRUPO 07 - Gabriel, Carlos, Mavio , Fabrycio</p>
+    </footer>
+    
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>

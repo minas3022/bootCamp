@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas Geométricas</title>
+</head>
+<body>
+    <h1>Formas Geométricas</h1>
+    <div>
+        <h2>Retângulo</h2>
+        <label for="rect-width">Largura:</label>
+        <input type="number" id="rect-width">
+        <label for="rect-height">Altura:</label>
+        <input type="number" id="rect-height">
+        <button onclick="calcularRetangulo()">Calcular</button>
+        <p id="rect-result"></p>
+    </div>
+    <div>
+        <h2>Círculo</h2>
+        <label for="circle-radius">Raio:</label>
+        <input type="number" id="circle-radius">
+        <button onclick="calcularCirculo()">Calcular</button>
+        <p id="circle-result"></p>
+    </div>
+    <div>
+        <h2>Triângulo</h2>
+        <label for="triangle-base">Base:</label>
+        <input type="number" id="triangle-base">
+        <label for="triangle-height">Altura:</label>
+        <input type="number" id="triangle-height">
+        <label for="triangle-sideA">Lado A:</label>
+        <input type="number" id="triangle-sideA">
+        <label for="triangle-sideB">Lado B:</label>
+        <input type="number" id="triangle-sideB">
+        <label for="triangle-sideC">Lado C:</label>
+        <input type="number" id="triangle-sideC">
+        <button onclick="calcularTriangulo()">Calcular</button>
+        <p id="triangle-result"></p>
+    </div>
+
+    <script src="01tarefa.js"></script>
+</body>
+</html>

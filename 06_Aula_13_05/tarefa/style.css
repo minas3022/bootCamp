@@ -1,0 +1,31 @@
+body{
+background-color: rgba(214, 202, 163, 0.897);
+}
+
+footer{
+    background-color: rgba(171, 203, 218, 0.897);
+    }
+
+
+    /* CENTRALIZAR BLOCO */
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* CLASSE FIGURE */
+.figure{
+
+width: 40px;;   
+}
+
+/* CLASSE GRADIENTE */
+.gradiente {
+    /* Utilize linear-gradient() para criar o gradiente */
+    background-image: linear-gradient(to right, #ff6b6b, #556270);
+    /* Adicione outras propriedades de estilo conforme necessário */
+    width: 100%;
+    height: 200px;
+}

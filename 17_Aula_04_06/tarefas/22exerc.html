@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores Únicos em um Array</title>
+</head>
+<body>
+    <h1>Valores Únicos em um Array</h1>
+    <label for="Digita">Digite os números separados por vírgula:</label>
+    <input type="text" id="numerosInput" placeholder="Digite os números separados por vírgula">
+    <button onclick="filtrarValoresUnicos()">Filtrar Valores Únicos</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Função arrow que recebe um array de números e retorna um novo array com valores únicos
+        const filtraValoresUnicos = (array) => {
+            return Array.from(new Set(array));
+        };
+
+        // Função que é chamada quando o botão é clicado
+        const filtrarValoresUnicos = () => {
+            const numerosInput = document.getElementById('numerosInput').value;
+            const numeros = numerosInput.split(',').map(num => parseFloat(num.trim()));
+            const resultado = filtraValoresUnicos(numeros);
+            document.getElementById('resultado').innerText = `Valores Únicos: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

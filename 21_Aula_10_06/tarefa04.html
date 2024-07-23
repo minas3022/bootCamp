@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Dados Dinâmica</title>
+    <link rel="stylesheet" href="tarefa04.css">
+</head>
+<body>
+    <div class="tabela-container">
+        <h1 style="color: blue;">Tabela de Dados</h1>
+        <div class="filtro-grupo">
+            <input type="text" id="filtro-nome" placeholder="Filtrar por Nome">
+            <input type="text" id="filtro-idade" placeholder="Filtrar por Idade">
+            <input type="text" id="filter-cidade" placeholder="Filtrar por Cidade">
+        </div>
+        <table id="tabela-dados">
+            <thead>
+                <tr>
+                    <th data-column="nome" data-order="desc">Nome</th>
+                    <th data-column="idade" data-order="desc">Idade</th>
+                    <th data-column="cidade" data-order="desc">Cidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados serão inseridos dinamicamente aqui -->
+            </tbody>
+        </table>
+    </div>
+    <script src="tarefa04.js"></script>
+</body>
+</html>
